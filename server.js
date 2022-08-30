@@ -85,11 +85,7 @@ function validateAnimal(animal) {
   return true;
 }
 app.get("/", (req, res) => {
-  let results = animals;
-  if (req.query) {
-    results = filterByQuery(req.query, results);
-  }
-  res.json(results);
+  res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
 app.get("/api/animals", (req, res) => {
