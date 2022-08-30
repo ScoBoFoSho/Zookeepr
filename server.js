@@ -11,6 +11,9 @@ app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
 
+// this code acts as middleware and tells express.js
+// to search for (or get) everything in the 'public' folder
+app.use(express.static('public'));
 function filterByQuery(query, animalsArray) {
   let personalityTraitsArray = [];
   // Note that we save the animalsArray as filteredResults here:
