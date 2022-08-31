@@ -87,6 +87,11 @@ function validateAnimal(animal) {
   }
   return true;
 }
+
+app.get('./animals', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/animals.html'));
+});
+
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
 });
