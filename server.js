@@ -96,10 +96,6 @@ app.get('/zookeepers', (req, res) => {
   res.sendFile(path.join(__dirname, './public/zookeepers.html'));
 });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, './public/index.html'));
-});
-
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
 });
@@ -120,6 +116,11 @@ app.get('/api/animals/:id', (req, res) => {
     res.send('404 ERROR!');
   }
 });
+
+// Alex said this is lame
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, './public/index.html'));
+// });
 
 app.post('/api/animals', (req, res) => {
   //set id based on the next index of the array
