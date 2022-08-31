@@ -88,7 +88,7 @@ function validateAnimal(animal) {
   return true;
 }
 
-app.get('./animals', (req, res) => {
+app.get('/animals', (req, res) => {
   res.sendFile(path.join(__dirname, './public/animals.html'));
 });
 
